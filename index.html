@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#317EFB"/>
+	<link rel="stylesheet" href="https://cdnjs.	cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Thuhtooaung</title>
+	<link rel="manifest" href="/pwax/manifest.json">
+
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="/pwax/img/icons/icon-96x96.png">
+	<meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+	<style type="text/css">
+		body {
+			background-color: #FAFAFA ;
+		}
+
+
+		@font-face {
+			font-family: namingFont;
+			src: url(/pwax/font/Roboto-Regular.ttf);
+		}
+
+		@font-face {
+			font-family: welcomeFont;
+			src: url(/pwax/font/Jost-Regular.ttf);
+		}
+
+		@font-face{
+			font-family: who;
+			src: url(/pwax/font/NanumGothic-ExtraBold.ttf);
+		}
+
+		@font-face{
+			font-family: who_p;
+			src: url(/pwax/font/Jost-Light.ttf);
+		}
+
+		@font-face{
+			font-family: thank;
+			src: url(/pwax/font/Merienda-Regular.ttf);
+		}
+
+
+		.pj_desc{
+			font-family: namingFont;
+		}
+		.p{
+			font-family: namingFont;
+		}
+		.who{
+			font-family: who;
+		}
+		.who_p{
+			font-family: who_p;
+		}
+		.programming {
+			font-family: namingFont;
+		}
+		.repo{
+			font-family: who_p;
+		}
+		#thank{
+			font-family: thank;
+			font-size: 20px;
+		}
+
+		li {
+			font-family: welcomeFont;
+		}
+
+		#mglp{
+			font-weight: bold;
+		}
+		#img {
+			width: 150px;
+			height: 150px;
+  			border-radius: 50%;	
+  			margin: 50px 50px 0px 50px;
+  			padding:3px;
+   			border:3px solid #F50057;
+		}
+		#welcome_text{
+			margin-top: 5px;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-bottom: 5px;
+			font-family: welcomeFont;
+			font-size: 18px;
+			color: black;
+		}
+		.fa {
+  			padding: 10px;
+  			font-size: 15px;
+  			width: 15px;
+  			text-align: center;
+  			text-decoration: none;
+  			border-radius: 50%;
+			}
+		.fa:hover {
+  			opacity: 0.8;
+		}
+		.fa-facebook {
+  			background: #4169E1;
+  			color: white;
+		}
+		.fa-twitter {
+  			background: #1E90FF;
+  			color: white;
+		}
+		.fa-linkedin {
+  			background: #00BFFF;
+  			color: white;
+		}
+		.fa-instagram {
+  			background: #F50057;
+  			color: white;
+		}
+		.fa-github {
+  			background: #9C27B0;
+  			color: white;
+		}
+		#card {
+			margin: 3%;
+			border-radius: 5px;
+			background-color: #FAFAFA;
+		}
+
+
+		#contact_me{
+			width: 30%;
+			background-color: DodgerBlue;
+			border: none;
+			margin: 20px;
+			border-radius: 5px;
+		}
+		#contact_me:hover{
+			background-color: RoyalBlue;
+		}
+
+		#contact{
+			margin: 10px;
+			color: #FAFAFA;	
+		}
+
+		#gmail{
+			font-size: 8px;
+			color: #212121;	
+		}
+
+		.table{
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+
+		.container {
+  			width: 100%; /* Full width */
+  			background-color: #ddd; /* Grey background */
+			}
+
+		.skills {
+  			text-align: right; /* Right-align text */
+  			padding-top: 1px; /* Add top padding */
+  			padding-bottom: 1px; /* Add bottom padding */
+  			color: white; /* White text color */
+			}
+
+		.android {width: 90%; background-color: #4CAF50;} /* Green */
+		.web {width: 70%; background-color: #2196F3;} /* Blue */
+		.design {width: 65%; background-color: #f44336;} /* Red */
+
+		.java {width: 75%; background-color: #808080;} /* Dark Grey */
+		.flutter {width: 60%; background-color: #808080;}
+		.kotlin {width: 51%; background-color: #808080;}
+		.html {width: 70%; background-color: #808080;}
+		.css {width: 68%; background-color: #808080;}
+		.js {width: 61%; background-color: #808080;}
+		.nodejs {width: 55%; background-color: #808080;}
+		.deno {width: 60%; background-color: #808080;}
+		.php {width: 65%; background-color: #808080;}
+		.mysql {width: 50%; background-color: #808080;}
+		.mongo {width: 70%; background-color: #808080;}
+		.cs {width: 40%; background-color: #808080;}
+		.cpp {width: 45%; background-color: #808080;}
+		.rust {width: 49%; background-color: #808080;}
+
+
+		.element {width: 100%; display: flex; background-color: skyblue;} 
+		.project_img {width: 30%; height: 30%;}
+		.project_title {padding: 3px; font-family: who;}
+		.card {
+			width: 70%;
+  			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  			transition: 0.3s;
+  			margin-left: 15%;
+  			margin-right: 15%;
+  			margin-top: 50px;
+  			margin-bottom: 100px;
+  			border-radius: 5px;
+		}
+		.card:hover {
+  			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.card_footer{
+			display: flex; margin-top: 20px;
+		}
+
+		.card_number{
+			width: 10%;
+			margin-left: 10px;
+			color: black;
+			font-weight: bold;
+		}
+
+		.card_btn{
+			width: 80%;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<img id="img" src="/pwax/img/thuhtooaung.png" alt="Avatar">
+			<p class="p">Thu Htoo Aung</p>
+			<p class="p">( Android Developer )</p>
+			<table>
+				<tr>
+					<td>
+						<a href="https://m.facebook.com/thuhtooaung.com.mm" class="fa fa-facebook"></a>
+					</td>
+					<td>
+						<a href="https://twitter.com/thuhtooaungcom" class="fa fa-twitter"></a>
+					</td>
+					<td>
+						<a href="https://linkedin.com/in/thuhtooaung" class="fa fa-linkedin"></a>
+					</td>
+					<td>
+						<a href="https://instagram.com/thuhtooaungcom" class="fa fa-instagram"></a>
+					</td>
+					<td>
+						<a href="https://github.com/thuhtooaung" class="fa fa-github"></a>
+					</td>
+				</tr>
+			</table>
+
+			<p id="mglp">မင်္ဂလာပါ ချစ်မိတ်ဆွေ</p>
+
+			<p id="welcome_text">"Warmly Welcome from my Portfolio Website. Thank you a lot for visting to my portfolio website even you are busy. Now you found an android developer to perform your work in your company..."</p>	
+
+			<button id="contact_me">
+				<p id="contact">Contact Me via Gmail</p>
+				<p id="gmail">thuhtooaung.dev@gmail.com</p>
+			</button>
+
+			<p class="who">Who Am I ?</p>
+
+			<p class="who_p"> My name is Thu Htoo Aung. I am Android Developer.</p>
+			<p class="who_p">I graduated from University of Computer Studies( Maubin ) UCS-Maubin. I learned Computer Science for five years.</p>
+			<p class="who_p">I learned web development from 2015 to 2017 (HTML, CSS, JavaScript, PHP, MySQL) by training and self-study.</p>
+			<p class="who_p">I learned mobile application development from 2017. I can develop android application using Java,Kotlin and Flutter.</p>
+			<p class="who_p">I can develop web applications (CRUD Restful Api) using Php, Nodejs, Deno and MongoDB.</p> 
+			<p class="who_p">I can use Graphic Design and Prototyping Softwares like Gimp(GNU Image Manipulation Program), Figma, Inkscape and Adobe XD.</p>
+			<p class="who_p">I can use Git and Github, also MS Word,Excel,Power Point, Google Docs and Email.</p>
+
+		</center>
+
+		<center><p class="who">My Skills Progress</p></center>
+
+		<table class="table">
+			<tr>
+				<td>
+					<p class="programming">Android</p>
+				</td>
+				<td  style="width: 100%">
+					<div class="container">
+  					<div class="skills android">90%</div>
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Web</p>
+				</td>
+				<td  style="width: 100%">
+					<div class="container">
+  					<div class="skills web">70%</div>
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Design</p>
+				</td>
+				<td  style="width: 100%">
+					<div class="container">
+  					<div class="skills design">65%</div>
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Java</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills java">75%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Flutter</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills flutter">60%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Kotlin</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills kotlin">51%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Html</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills html">70%</div>
+				</td>
+				<tr>
+				<td>
+					<p>CSS</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills css">68%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">JS</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills js">61%</div>
+				</td>
+			</tr>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Nodejs</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills nodejs">55%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Deno</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills deno">60%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">PHP</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills php">65%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">MySQL</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills mysql">50%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">MongoDB</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills mongo">70%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>C#</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills cs">40%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">C++</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills cpp">45%</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="programming">Rust</p>
+				</td>
+				<td style="width: 100%;">
+					<div class="container">
+  					<div class="skills rust">49%</div>
+				</td>
+			</tr>
+		</table>
+
+
+		<center>
+			<p class="who">Developed Projects</p>
+		</center>
+
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">iWavePOS Waiter Android Application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Only iWavePOS customer can use this application to order menu items from their waiter using this application.
+							</li>
+							<li>
+								At Innowave Myanmar Company Limited (Yangon).
+							</li>
+							<li>
+								Time Peroid : 2 months
+							</li>
+							<li>
+								Technologies : Android (Java)
+							</li>
+							<li>
+								Publicity : Not available
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#1</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">Restaurant Menu Webpage</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								iWavePOS customers' customers can use this application to view menu items from their mobile browser using QR Code.
+							</li>
+							<li>
+								At Innowave Myanmar Company Limited (Yangon).
+							</li>
+							<li>
+								Time Peroid : 1 week
+							</li>
+							<li>
+								Technologies: PHP, HTML, CSS, JavaScript
+							</li>
+							<li>
+								Publicity : Not available
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#2</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">Odoo ERP Android Web Client Application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Innowave Odoo Software Customers can use this application to use their Odoo Web as an android web client app (Hybrid).
+							</li>
+							<li>
+								At Innowave Myanmar Company Limited (Yangon).
+							</li>
+							<li>
+								Time Peroid : 6 hrs
+							</li>
+							<li>
+								Technologies: Android Java
+							</li>
+							<li>
+								Publicity : Not available
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#3</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">SecureNote Android Application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Anyone can use this application. Users can save their notes using this application. 
+							</li>
+							<li>
+								Free Development and Self Production 
+							</li>
+							<li>
+								Time Peroid : Development time - 2 weeks and Production Time - 2 weeks
+							</li>
+							<li>
+								Technologies: Android Java
+							</li>
+							<li>
+								Publicity : Available on Google Play Store
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#4</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">QR Tool Android Application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Anyone can use this application. Users can scan and generate QR Code and Bar Code using this application. 
+							</li>
+							<li>
+								Free Development and Self Production 
+							</li>
+							<li>
+								Time Peroid : Development time - 2 weeks and Production Time - 1 weeks
+							</li>
+							<li>
+								Technologies: Android Java
+							</li>
+							<li>
+								Publicity : Available on Google Play Store
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#5</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">Learn MongoDB android application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Anyone can use this application. This application help to learn MongoDB more easily with myanmar language.
+							</li>
+							<li>
+								Free Development and Self Production 
+							</li>
+							<li>
+								Time Peroid : Development time - 3 weeks and Production Time - 1 weeks
+							</li>
+							<li>
+								Technologies: Flutter, Deno Server and MongoDB
+							</li>
+							<li>
+								Publicity : Available on Google Play Store
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#6</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">Deno Server for Learn MongoDB android application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Anyone can access the RESTFUL API free.
+							</li>
+							<li>
+								Free Development and Self Production 
+							</li>
+							<li>
+								Time Peroid : Development time - 1 weeks and Production Time - 1 weeks
+							</li>
+							<li>
+								Technologies: Deno TypeScript and Heroku Hosting
+							</li>
+							<li>
+								Publicity : Public, Free, Deployed on Heroku.
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#7</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">TripAdvisor Android Applicaton</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Anyone can use this application. This application help users to read trip reviews and guides in Myanmar. Only myanmar language is supported.
+							</li>
+							<li>
+								Developed with team(Team Initial) for University Product Show.
+							</li>
+							<li>
+								Time Peroid : Development time - 1 month
+							</li>
+							<li>
+								Technologies: Android Java, Firebase Authentication and Realtime Database
+							</li>
+							<li>
+								Publicity : Public(Educational Only), Not production
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#8</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+
+		<div class="card">
+			<div class="element">
+				<img src="/pwax/img/android.png" class="project_img">
+				<span>
+					<center><p class="project_title">Karuna Android Application</p></center>
+					<span class="pj_desc">&nbsp;Project Description:</span>
+					<span>
+						<ul>
+							<li>
+								Specific Organization can use this application. This app help users(Organization) to record blood doners' information.
+							</li>
+							<li>
+								Developed with team(DevScrew). Under MMARC Freelance team.
+							</li>
+							<li>
+								Time Peroid : Development time - 2 month
+							</li>
+							<li>
+								Technologies: Android Java, Laraval Backend
+							</li>
+							<li>
+								Publicity : Discontinued
+							</li>
+						</ul>
+					</span>
+				</span>
+			</div>
+			<div class="card_footer">
+				<span class="card_number">#9</span>
+				<div class="card_btn"><center><button>Get app</button></center></div>
+			</div><br>
+		</div>
+
+		<center><a href="/pwax/pages/go.html" class="repo">Here are my project github repositories</a></center>
+
+		<br><br>
+
+		<center><span id="thank">Special Thank , You reached end.</span></center>
+
+		<br>
+
+		<div style="width: 100%; display: flex;">
+			<span style="width: 45%; height: 3px; background-color: red;"></span>
+			<span style="width: 10%; background-color: blue; height: 3px;"></span>
+			<span style="width: 45%; height: 3px; background-color: red	; float: right;"></span>
+		</div>
+
+		<script src="/pwax/js/app.js"></script>
+
+</body>
+</html>
